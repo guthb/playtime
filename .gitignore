@@ -6,10 +6,10 @@
 /out-tsc
 
 # dependencies
-/node_modules
+node_modules/
 package-lock.json
-/dist
-*/dnc
+dist/
+dnc/
 
 # profiling files
 chrome-profiler-events.json
