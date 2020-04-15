@@ -16,10 +16,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
         <!-- <button class="btn btn-primary" (click)="handleClickMe()">Click me!</button> -->
       </div>
       `,
-  // styles: [`
-  //       .pad-left { margin-left: 10px;}
-  //       .well div {color: red;}
-  //     `]
+  styles: [`
+        .pad-left { margin-left: 10px;}
+        .well div {color: #bbb;}
+      `]
 })
 
 export class EventThumbnailComponent {

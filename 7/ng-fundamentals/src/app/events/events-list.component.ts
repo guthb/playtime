@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
     <h1>Upcoming Angular Events</h1>
     <hr>
     <!-- <event-thumbnail (eventClick)="handleEventClicked($event)" -->
-    <div class="well">
+    <!-- <div class="well">
       <div>Hello World</div>
-    </div>
+    </div> -->
      <event-thumbnail #thumbnail [event]="event1"></event-thumbnail>
      <!-- <h3> {{thumbnail.someProperty}}</h3>
       <button class="btn btn-primary" (click)="thumbnail.logfoo()">Log Foo</button> -->
@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
   `,
   styles: [`
         .pad-left { margin-left: 10px;}
-        .well div {color: red;}
+        .well div {color: bbb;}
       `]
 })
 
