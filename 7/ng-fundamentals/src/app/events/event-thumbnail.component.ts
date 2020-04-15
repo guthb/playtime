@@ -26,6 +26,8 @@ export class EventThumbnailComponent {
   //   console.log("you clicked me")
   //   this.eventClick.emit(this.event.name)
   // }
+  someProperty: any = "some value"
+
   logfoo() {
     console.log('log foo')
   }
