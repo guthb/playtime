@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
     <h1>Upcoming Angular Events</h1>
     <hr>
     <div class="row">
-      <event-thumbnail *ngFor="let event of events" [event]="event"></event-thumbnail>
+     <div class="col-md-5" *ngFor="let event of events" >
+      <event-thumbnail [event]="event"></event-thumbnail>
+    </div>
     </div>
     <!-- <event-thumbnail (eventClick)="handleEventClicked($event)" -->
     <!-- <div class="well">
