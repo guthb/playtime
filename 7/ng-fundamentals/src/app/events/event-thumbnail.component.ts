@@ -14,10 +14,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
           <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
         </div>
         <!-- <button class="btn btn-primary" (click)="handleClickMe()">Click me!</button> -->
-        <div *ngIf="event?.onLineUrl">
+        <div *ngIf="event?.onlineUrl">
           Online URL: {{event?.onlineUrl}}
         </div>
-
       </div>
       `,
   styles: [`
