@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
     <hr>
     <div class="row">
      <div class="col-md-5" *ngFor="let event of events" >
-      <event-thumbnail></event-thumbnail>
+      <event-thumbnail [event]="event"></event-thumbnail>
     </div>
     </div>
     <!-- <event-thumbnail (eventClick)="handleEventClicked($event)" -->
@@ -113,11 +113,7 @@ export class EventsListComponent {
       time: '9:00 am',
       price: 950.00,
       imageUrl: '/assets/images/ng-nl.png',
-      location: {
-        address: 'The NG-NL Convention Center & Scuba Shop',
-        city: 'Amsterdam',
-        country: 'Netherlands'
-      },
+      onlineUrl: 'http://ng-nl.org',
       sessions: [
         {
           id: 1,
