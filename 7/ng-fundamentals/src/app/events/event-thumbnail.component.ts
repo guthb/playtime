@@ -45,16 +45,15 @@ export class EventThumbnailComponent {
   //   console.log("you clicked me")
   //   this.eventClick.emit(this.event.name)
   // }
-  someProperty: any = "some value"
+  // someProperty: any = "some value"
 
-  logfoo() {
-    console.log('log foo')
-  }
+  // logfoo() {
+  //   console.log('log foo')
+  // }
 
   getStartTimeClass() {
-    const isEarlyStart = this.event && this.event.time === '8:00 am '
-    return { green: isEarlyStart, bold: isEarlyStart }
+    if (this.event && this.event.time === '8:00 am')
+      return ['green', 'bold']
+    return []
   }
-
-
 }
