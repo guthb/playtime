@@ -8,7 +8,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
         <div>Date: {{event?.date}}</div>
         <div>Time: {{event?.time}}</div>
         <div>Price: \${{ event?.price }}</div>
-        <div *ngIf="event?.location">
+        <!-- <div *ngIf="event?.location"> -->
+        <div [hidden]="!event?.location">
           <span>Location: {{event?.location?.address}}</span>
           <!-- <span>&nbsp;</span> -->
           <span class="pad-left">{{event?.location?.city}}, {{event?.location?.country}}</span>
