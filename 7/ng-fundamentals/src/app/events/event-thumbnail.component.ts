@@ -8,9 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
         <div>Date: {{event?.date}}</div>
         <!-- <div [class.green]="event?.time === '8:00 am'" [ngSwitch]="event?.time"> -->
         <!-- <div [ngClass]="{green: event?.time === '8:00 am', bold: event?.time === '8:00 am'}" [ngSwitch]="event?.time"> -->
-        <div [ngStyle] = "{'color': event?.time === '8.00 am' ?
-          '#003300' : '#bbb', 'font-weight': event?.time === '8:00 am'
-          ? 'bold': 'normal'}"  [ngSwitch]="event?.time">
+        <div [ngStyle]="getStartTimeStyle()"   [ngSwitch]="event?.time">
         <!-- <div [style.color] = "event?.time === '8.00 am' ? '#003300' : '#bbb'" [ngSwitch]="event?.time"> -->
          <!-- <div [ngClass]="getStartTimeClass()" [ngSwitch]="event?.time"> -->
           Time: {{event?.time}}
@@ -60,4 +58,12 @@ export class EventThumbnailComponent {
       return ['green', 'bold']
     return []
   }
+
+  getStartTimeStyle(): any {
+
+    if (this.event && this.event.time === '8:00 am')
+      return { color: '#003300', 'font-weight': 'bold' }
+    return {}
+  }
+
 }
