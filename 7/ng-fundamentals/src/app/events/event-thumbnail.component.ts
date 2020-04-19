@@ -29,7 +29,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
       </div>
       `,
   styles: [`
-        .green{color: #003300 !improtant;}
+        .green {color: green !important;}
         .bold { font-weight: bold;}
         .thumbnail {min-height: 210px;}
         .pad-left { margin-left: 10px;}
