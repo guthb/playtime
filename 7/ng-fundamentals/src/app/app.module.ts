@@ -17,7 +17,6 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
     EventThumbnailComponent,
     NavBarComponent,
     EventDetailsComponent
-
   ],
   imports: [
     BrowserModule
