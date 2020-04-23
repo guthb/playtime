@@ -19,4 +19,6 @@ export class EventDetailsComponent implements OnInit {
     //this.event = this.eventService.getEvent(1)
   }
 
+
+
 }
