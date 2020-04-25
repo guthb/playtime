@@ -24,7 +24,7 @@ declare let toastr
 })
 
 export class EventsListComponent implements OnInit {
-  events: any[]
+  events: any
 
   constructor(private EventService: EventService, private toastr: ToastrService) {
 
@@ -34,7 +34,7 @@ export class EventsListComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
 
-    this.events = this.EventService.getEvents()
+    this.EventService.getEvents().subscribe(events => { this.events = events })
   }
 
   handleThumbnailClick(eventName) {
