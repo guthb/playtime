@@ -1,4 +1,4 @@
-export interface IEvnt {
+export interface IEvent {
   id: number
   name: string
   date: Date
@@ -21,5 +21,5 @@ export interface ISession {
   duration: number
   level: string
   abstract: string
-  voters: string
+  voters: string[]
 }
