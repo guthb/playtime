@@ -14,11 +14,12 @@ export class AuthService {
       firstName: 'Frank',
       lastName: 'Beans'
     }
-
-
-
-
   }
+
+  isAuthenticated() {
+    return !!this.currentUser;
+  }
+
 
   constructor() { }
 }
