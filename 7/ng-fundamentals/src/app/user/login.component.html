@@ -11,7 +11,8 @@
     </div>
     <div class="form-group">
       <label for="password">Password:</label>
-      <em *ngIf="loginForm.controls.password?.invalid && loginForm.controls.password?.touched">Required</em>
+      <em
+        *ngIf="loginForm.controls.password?.invalid && (loginForm.controls.password?.touched) || mouseoverLogin">Required</em>
       <input (ngModel)="password" name="password" id="password" type="password" required class="form-control"
         placeholder="Password..." />
     </div>
