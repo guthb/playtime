@@ -4,7 +4,8 @@
   <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" autocomplete="off" novaildate>
     <div class="form-group">
       <label for="userName">User Name:</label>
-      <em *ngIf="loginForm.controls.userName?.invalid && loginForm.controls.userName?.touched ">Required</em>
+      <em
+        *ngIf="loginForm.controls.userName?.invalid && (loginForm.controls.userName?.touched ) || mouseoverLogin">Required</em>
       <input (ngModel)="username" name="userName" id="userName" required type="text" class="form-control"
         placeholder="User Name..." />
     </div>
