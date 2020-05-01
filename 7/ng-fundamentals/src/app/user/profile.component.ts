@@ -19,9 +19,11 @@ export class ProfileComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
 
-    let firstName = new FormControl(this.authService.firstName)
+    let firstName = new FormControl
+      (this.authService.currentUser.firstName)
 
-    let lastName = new FormControl(this.authService.lastName)
+    let lastName = new FormControl
+      (this.authService.currentUser.lastName)
 
     this.profileForm = new FormGroup({
       firstName: firstName,
@@ -31,6 +33,7 @@ export class ProfileComponent implements OnInit {
 
   saveProfile(formValues) {
     this.authService.updateCurrentUser(formValues.firstName, formValues.lastName)
+    this.router.navigate(['events'])
   }
 
   cancel() {
