@@ -6,7 +6,7 @@ import { AuthService } from './auth.service'
 @Component({
   templateUrl: './profile.component.html'
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
 
   profileForm: FormGroup
 
@@ -20,6 +20,7 @@ export class ProfileComponent {
     //Add 'implements OnInit' to the class.
 
     let firstName = new FormControl(this.authService.firstName)
+
     let lastName = new FormControl(this.authService.lastName)
 
     this.profileForm = new FormGroup({
