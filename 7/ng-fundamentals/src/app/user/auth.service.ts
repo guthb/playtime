@@ -6,6 +6,7 @@ import { IUser } from './user.model';
 })
 export class AuthService {
   currentUser: IUser
+
   loginUser(userName: string, password: string) {
     //faking the method retun for now
     this.currentUser = {
@@ -20,6 +21,11 @@ export class AuthService {
     return !!this.currentUser;
   }
 
+  updateCurrentUser(firstName: string, lastName: string) {
+    this.currentUser.firstName = firstName
+    this.currentUser.lastName = lastName
+
+  }
 
   constructor() { }
 }
