@@ -17,7 +17,6 @@ import { LoginComponent } from './login.component'
   declarations: [
     ProfileComponent,
     LoginComponent
-
   ],
   providers: [
 
