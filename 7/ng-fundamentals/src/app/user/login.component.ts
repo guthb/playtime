@@ -13,9 +13,9 @@ import { Router } from '@angular/router'
 export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) { }
 
-  username: string
-  password: string
-  mouseoverLogin: boolean
+  username
+  password
+  mouseoverLogin
 
   login(formValues) {
     this.authService.loginUser(formValues.userName, formValues.password)

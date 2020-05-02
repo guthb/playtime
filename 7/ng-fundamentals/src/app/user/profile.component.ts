@@ -7,7 +7,7 @@ import { AuthService } from './auth.service'
   templateUrl: './profile.component.html',
   styles: [`
     em {float:right; color#E05C65; padding-left:10px}
-    .error imput {background-color:#E3C3C5;}
+    .error input {background-color:#E3C3C5;}
     .error ::-webkit-imput-placeholder {color: #999;}
     .error ::-moz-placeholder {color: #999;}
     .error :-moz-placeholder {color: #999;}
@@ -18,6 +18,8 @@ import { AuthService } from './auth.service'
 export class ProfileComponent implements OnInit {
 
   profileForm: FormGroup
+  private firstName: FormControl
+  private lastName: FormControl
 
   constructor(private router: Router, private authService: AuthService) {
 
@@ -25,18 +27,16 @@ export class ProfileComponent implements OnInit {
 
 
   ngOnInit() {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
 
-    let firstName = new FormControl
+    this.firstName = new FormControl
       (this.authService.currentUser.firstName, Validators.required)
 
-    let lastName = new FormControl
+    this.lastName = new FormControl
       (this.authService.currentUser.lastName, Validators.required)
 
     this.profileForm = new FormGroup({
-      firstName: firstName,
-      lastName: lastName
+      firstName: this.firstName,
+      lastName: this.lastName
     })
   }
 
@@ -46,6 +46,15 @@ export class ProfileComponent implements OnInit {
       this.router.navigate(['events'])
     }
   }
+  validateFirstName() {
+    return this.firstName.valid || this.firstName.touched
+  }
+
+  validateLastName() {
+    return this.lastName.valid || this.lastName.touched
+  }
+
+
 
   cancel() {
     this.router.navigate(['events'])
