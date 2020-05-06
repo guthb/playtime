@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router';
 
+
 @Component({
   templateUrl: 'create-event.component.html',
   styles: [`
@@ -13,6 +14,7 @@ import { Router } from '@angular/router';
   `]
 })
 export class CreateEventComponent {
+  newEvent
   isDirty: boolean = true;
   constructor(private router: Router) {
 
