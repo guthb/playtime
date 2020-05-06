@@ -24,7 +24,7 @@ import { appRoutes } from './routes';
 //import { CreateEventComponent } from './events/create-event.components';
 import { Error404Component } from './errors/404.components';
 import { AuthService } from './user/auth.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //import { EventRouterActivator } from './events/event-details/event-route-activator.service';
 //import { EventsListResolver } from './events/events-list-resolver.service';
 
@@ -41,7 +41,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     EventService,
