@@ -42,7 +42,11 @@ export class CreateSessionComponent implements OnInit {
     })
 
   }
-
+  private restrictedWords(control: FormControl): { [key: string]: any } {
+    return control.value.includes('foo')
+      ? { 'restrictedWords': 'foo' }
+      : null
+  }
   saveSession(formValues) {
     let session: ISession = {
       id: undefined,
