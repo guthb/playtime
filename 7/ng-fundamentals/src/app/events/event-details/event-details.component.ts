@@ -8,10 +8,12 @@ import { IEvent } from '../shared';
   styles: [`
     .container {padding-left: 20px; padding-right: 20px;}
     .event-image {height: 100px;}
+    a {cursor:pointer}
   `]
 })
 export class EventDetailsComponent implements OnInit {
   event: IEvent
+  addMode: boolean
 
   constructor(private eventService: EventService, private route: ActivatedRoute) { }
 
@@ -20,6 +22,7 @@ export class EventDetailsComponent implements OnInit {
     //this.event = this.eventService.getEvent(1)
   }
 
-
-
+  addSession() {
+    this.addMode = true
+  }
 }
