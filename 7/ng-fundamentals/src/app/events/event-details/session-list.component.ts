@@ -5,7 +5,7 @@ import { ISession } from '../shared/index';
 
 @Component({
   selector: 'session-list',
-  templateUrl: './sessions-list.component.html'
+  templateUrl: './session-list.component.html'
 })
 
 export class SessionListComponent {
