@@ -20,13 +20,13 @@ import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar.component';
 //import { EventService } from './events/shared/event.service';
 import { ToastrService } from './common/toastr.service';
+import { CollapsbileWellComponent } from './common/collapsible-well.component';
 //import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { appRoutes } from './routes';
 //import { CreateEventComponent } from './events/create-event.components';
 import { Error404Component } from './errors/404.components';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CollapsbileWellComponent } from './common/collapsible-well.component';
 
 //import { EventRouterActivator } from './events/event-details/event-route-activator.service';
 //import { EventsListResolver } from './events/events-list-resolver.service';
