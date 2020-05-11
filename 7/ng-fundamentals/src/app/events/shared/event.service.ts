@@ -21,7 +21,7 @@ export class EventService {
     EVENTS.push(event)
   }
 
-  updateEvent(event: IEvent) {
+  updateEvent(event) {
     let index = EVENTS.findIndex(x => x.id = event.id)
     EVENTS[index] = (event)
   }
