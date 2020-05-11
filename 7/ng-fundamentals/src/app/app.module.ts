@@ -12,7 +12,6 @@ import {
   EventsListResolver,
   CreateSessionComponent,
   SessionListComponent
-
 } from './events/index'
 
 import { EventsAppComponent } from './events-app.component';
@@ -27,6 +26,8 @@ import { appRoutes } from './routes';
 import { Error404Component } from './errors/404.components';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CollapsbileWellComponent } from './common/collapsible-well.component';
+
 //import { EventRouterActivator } from './events/event-details/event-route-activator.service';
 //import { EventsListResolver } from './events/events-list-resolver.service';
 
@@ -40,7 +41,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CreateEventComponent,
     Error404Component,
     CreateSessionComponent,
-    SessionListComponent
+    SessionListComponent,
+    CollapsbileWellComponent
   ],
   imports: [
     BrowserModule,

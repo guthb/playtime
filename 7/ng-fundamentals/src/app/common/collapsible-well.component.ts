@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'collapsile-well',
+  selector: 'collapsible-well',
   template: `
     <div (click)="toggleContent()" class="well pointable">
       <h4 clas="well-title"> {{title}}</h4>
@@ -12,7 +12,7 @@ import { Component, Input } from '@angular/core';
   `
 })
 
-export class CollapsileWellComponent {
+export class CollapsbileWellComponent {
   @Input() title: string;
   visible: boolean = true;
 
