@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <div (click)="toggleContent()" class="well pointable">
       <h4 clas="well-title"> {{title}}</h4>
-      <<ng-content></ng-content>
+      <<ng-content *ngIf="visible"></ng-content>
 
     </div>
 
@@ -14,9 +14,9 @@ import { Component, Input } from '@angular/core';
 
 export class CollapsileWellComponent {
   @Input() title: string;
-  visbile: boolean = true;
+  visible: boolean = true;
 
   toggleContent() {
-    this.visbile = !this.visbile;
+    this.visible = !this.visible;
   }
 }
