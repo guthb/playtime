@@ -16,15 +16,10 @@ import {
 } from './events/index'
 
 import { EventsAppComponent } from './events-app.component';
-//import { EventsListComponent } from './events/events-list.component';
-//import { EventThumbnailComponent } from './events/event-thumbnail.component'
 import { NavBarComponent } from './nav/navbar.component';
-//import { EventService } from './events/shared/event.service';
 import { ToastrService } from './common/toastr.service';
 import { CollapsbileWellComponent } from './common/collapsible-well.component';
-//import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { appRoutes } from './routes';
-//import { CreateEventComponent } from './events/create-event.components';
 import { Error404Component } from './errors/404.components';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
