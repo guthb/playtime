@@ -24,9 +24,6 @@ import { Error404Component } from './errors/404.components';
 import { AuthService } from './user/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-//import { EventRouterActivator } from './events/event-details/event-route-activator.service';
-//import { EventsListResolver } from './events/events-list-resolver.service';
-
 @NgModule({
   declarations: [
     EventsAppComponent,
