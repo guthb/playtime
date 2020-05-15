@@ -20,7 +20,6 @@ export class SessionListComponent implements OnChanges {
     }
   }
 
-
   filterSessions(filter) {
     if (filter === 'all') {
       this.visibleSessions = this.sessions.slice(0)
