@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { ISession } from '../shared/index';
+import { filter } from 'rxjs/operators';
 
 
 
@@ -20,11 +21,13 @@ export class SessionListComponent implements OnChanges {
   }
 
 
-  filterSessions() {
+  filterSessions(filter) {
     if (filter === 'all') {
-
+      this.visibleSessions = this.sessions.slice(0)
     } else {
-
+      this.visibleSessions = this.sessions.filter(session => {
+        return session.level.toLocaleLowerCase() === filter;
+      })
     }
   }
 
