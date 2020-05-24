@@ -25,7 +25,7 @@ export class NavBarComponent {
   }
 
   searchSessions(searchTerm) {
-    this.evenService.searchSessons(searchTerm).susbscribe(sessions => {
+    this.evenService.searchSessions(searchTerm).subscribe(sessions => {
       this.foundSessions = sessions;
       console.log(this.foundSessions);
     })
