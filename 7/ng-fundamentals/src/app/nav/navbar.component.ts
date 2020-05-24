@@ -30,9 +30,4 @@ export class NavBarComponent {
       console.log(this.foundSessions);
     })
   }
-
-
-
-
-
 }
