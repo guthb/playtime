@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../user/auth.service';
 import { ISession, EventService } from '../events';
+import { createOfflineCompileUrlResolver } from '@angular/compiler';
 
 
 @Component({
@@ -26,6 +27,7 @@ export class NavBarComponent {
   searchSessions(searchTerm) {
     this.evenService.searchSessons(searchTerm).susbscribe(sessions => {
       this.foundSessions = sessions;
+      console.log(this.foundSessions);
     })
   }
 
