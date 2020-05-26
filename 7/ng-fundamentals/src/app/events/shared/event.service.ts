@@ -28,11 +28,11 @@ export class EventService {
   }
 
   searchSessions(searchTerm: string) {
-    let term = searchTerm.toLocaleLowerCase();
-    let results: ISession[] = [];
+    var term = searchTerm.toLocaleLowerCase();
+    var results: ISession[] = [];
 
     EVENTS.forEach(event => {
-      let matchingSessions = event.sessions.filter(session =>
+      var matchingSessions = event.sessions.filter(session =>
         session.name.toLocaleLowerCase().indexOf(term) > -1);
       matchingSessions = matchingSessions.map((session: any) => {
         session.eventId = event.id;
@@ -41,7 +41,7 @@ export class EventService {
       results = results.concat(matchingSessions);
     })
 
-    let emitter = new EventEmitter(true);
+    var emitter = new EventEmitter(true);
     setTimeout(() => {
       emitter.emit(results);
     }, 100);
