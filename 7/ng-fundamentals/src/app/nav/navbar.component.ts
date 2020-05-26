@@ -21,7 +21,6 @@ export class NavBarComponent {
 
 
   constructor(private auth: AuthService, private evenService: EventService) {
-
   }
 
   searchSessions(searchTerm) {
