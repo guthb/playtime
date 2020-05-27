@@ -4,8 +4,8 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'simple-modal',
   template: `
-  <div id="{{elementId}}" class="modal fade" tabindex="-1">
-    <div class="modal-dialog">
+  <div id="{{elementId}}" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
       <div class="modal content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
@@ -19,7 +19,7 @@ import { Component, Input } from '@angular/core';
   </div>
   `,
   styles: [`
-  .modal-body {height: 250px; overflow-y; scroll;}
+.modal-body {height: 250px; overflow-y; scroll;}
 `]
 })
 export class SimpleModalComponent {
