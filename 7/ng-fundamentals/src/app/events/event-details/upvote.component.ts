@@ -1,5 +1,5 @@
-import { Component, Input, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'upvote',
