@@ -5,7 +5,7 @@ import { IUser } from './user.model';
   providedIn: 'root'
 })
 export class AuthService {
-  currentUser: IUser
+  public currentUser: IUser
 
   loginUser(userName: string, password: string) {
     //faking the method retun for now
