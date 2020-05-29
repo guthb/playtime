@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges } from '@angular/core';
 import { ISession } from '../shared/index';
 import { filter } from 'rxjs/operators';
+import { AuthService } from 'src/app/user/auth.service';
 
 
 
@@ -14,6 +15,8 @@ export class SessionListComponent implements OnChanges {
   @Input() filterBy: string;
   @Input() sortBy: string;
   visibleSessions: ISession[] = [];
+
+  constructor(private auth: AuthService) { }
 
   ngOnChanges() {
     if (this.sessions) {
@@ -31,6 +34,12 @@ export class SessionListComponent implements OnChanges {
     if (this.sortBy === 'votes')
       this.visibleSessions.sort(sortByVotesDsc);
   }
+
+  userHasVoted(session: ISession) {
+    return this.voterService.userHasVoted(session, this.auth.currentUser.userName)
+  }
+
+
 
   filterSessions(filter) {
     if (filter === 'all') {
