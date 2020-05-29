@@ -13,7 +13,8 @@ import {
   CreateSessionComponent,
   SessionListComponent,
   DurationPipe,
-  UpvoteComponent
+  UpvoteComponent,
+  VoterService
 } from './events/index'
 
 import { EventsAppComponent } from './events-app.component';
@@ -63,6 +64,7 @@ let jQuery = window['$'];
     { provide: JQ_TOKEN, useValue: jQuery },
     EventRouterActivator,
     EventsListResolver,
+    SpeechSynthesisVoice,
     AuthService,
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState }],
   bootstrap: [EventsAppComponent]

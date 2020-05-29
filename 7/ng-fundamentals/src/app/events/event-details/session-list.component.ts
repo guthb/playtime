@@ -2,6 +2,7 @@ import { Component, Input, OnChanges } from '@angular/core';
 import { ISession } from '../shared/index';
 import { filter } from 'rxjs/operators';
 import { AuthService } from 'src/app/user/auth.service';
+import { VoterService } from './voter.service';
 
 
 
@@ -16,7 +17,7 @@ export class SessionListComponent implements OnChanges {
   @Input() sortBy: string;
   visibleSessions: ISession[] = [];
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private voterService: VoterService) { }
 
   ngOnChanges() {
     if (this.sessions) {
