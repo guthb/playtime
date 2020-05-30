@@ -64,7 +64,7 @@ let jQuery = window['$'];
     { provide: JQ_TOKEN, useValue: jQuery },
     EventRouterActivator,
     EventsListResolver,
-    SpeechSynthesisVoice,
+    VoterService,
     AuthService,
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState }],
   bootstrap: [EventsAppComponent]
