@@ -26,29 +26,29 @@ export class EventDetailsComponent implements OnInit {
         this.addMode = false;
       })
     })
+
+
+    //this.event = this.eventService.getEvent(+this.route.snapshot.params['id'])
+    //this.event = this.eventService.getEvent(1)
+
   }
 
-  //this.event = this.eventService.getEvent(+this.route.snapshot.params['id'])
-  //this.event = this.eventService.getEvent(1)
-
-}
-
-addSession() {
-  this.addMode = true
-}
+  addSession() {
+    this.addMode = true
+  }
 
 
-saveNewSession(session: ISession) {
-  const nextId = Math.max.apply(null, this.event.sessions.map(s => s.id))
-  session.id = nextId + 1
-  this.event.sessions.push(session)
-  this.eventService.updateEvent(this.event)
-  this.addMode = false
-}
+  saveNewSession(session: ISession) {
+    const nextId = Math.max.apply(null, this.event.sessions.map(s => s.id))
+    session.id = nextId + 1
+    this.event.sessions.push(session)
+    this.eventService.updateEvent(this.event)
+    this.addMode = false
+  }
 
-cancelAddSession() {
-  this.addMode = false
-}
+  cancelAddSession() {
+    this.addMode = false
+  }
 
 
 }
