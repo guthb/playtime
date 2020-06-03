@@ -11,10 +11,6 @@ export class EventService {
 
   }
   getEvents(): Observable<IEvent[]> {
-    // let subject = new Subject<IEvent[]>()
-    // setTimeout(() => { subject.next(EVENTS); subject.complete(); }, 100)
-    // return subject
-
     return this.http.get<IEvent[]>('/api/events')
       .pipe(catchError(this.handleError<IEvent[]>('getEvents', [])))
   }
@@ -22,18 +18,12 @@ export class EventService {
   getEvent(id: number): Observable<IEvent> {
     return this.http.get<IEvent>('/api/events' + id)
       .pipe(catchError(this.handleError<IEvent>('getEvent')))
-
   }
 
   saveEvent(event) {
     let options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     return this.http.post<IEvent>('/api/events', event, options)
       .pipe(catchError(this.handleError<IEvent>('saveEvent')))
-  }
-
-  updateEvent(event) {
-    let index = EVENTS.findIndex(x => x.id = event.id)
-    EVENTS[index] = (event)
   }
 
   searchSessions(searchTerm: string) {
