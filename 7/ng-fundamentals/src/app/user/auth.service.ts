@@ -39,13 +39,13 @@ export class AuthService {
   }
 
   checkAuthenticationStatus() {
-    this.http.get('/api/currentIdentity')
+    return this.http.get('/api/currentIdentity')
       .pipe(tap(data => {
         if (data instanceof Object) {
           this.currentUser = <IUser>data;
         }
       }))
-      .subscribe()
+    //.subscribe()
 
     //or
     // .subscribe(data => {
