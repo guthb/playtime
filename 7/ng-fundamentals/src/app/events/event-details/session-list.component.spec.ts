@@ -14,6 +14,10 @@ describe('SessionListComponent', () => {
       component.sessions = <ISession[]>[{ name: 'session 1', level: 'intermediate' },
       { name: 'session 2', level: 'intermediate' },
       { name: 'session 3', level: 'beginner' }]
+      component.filterBy = 'intermediate';
+      component.sortBy = 'name';
+      component.eventId = 3;
+
     })
   })
 })
