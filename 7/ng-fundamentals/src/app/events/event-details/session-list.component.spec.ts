@@ -18,6 +18,11 @@ describe('SessionListComponent', () => {
       component.sortBy = 'name';
       component.eventId = 3;
 
+      component.ngOnChanges();
+
+
+      expect(component.visibleSessions.length).toBe(2);
+
     })
   })
 })
