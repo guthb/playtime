@@ -22,7 +22,7 @@ export class SessionListComponent implements OnChanges {
 
   ngOnChanges() {
     if (this.sessions) {
-      this.filterSessions(this.filterBy)
+      //this.filterSessions(this.filterBy)
       this.sortBy === 'name' ? this.visibleSessions.sort(sortByNameAsc) : this.visibleSessions.sort(sortByVotesDsc);
     }
   }
