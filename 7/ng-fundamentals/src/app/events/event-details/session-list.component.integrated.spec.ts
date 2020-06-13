@@ -17,8 +17,13 @@ describe('SessionListComponent', () => {
     debugEl: DebugElement
 
   beforeEach(async(() => {
-    let mockAuthService = {}
-    let mockVoterService = {}
+    let mockAuthService = {
+      isAuthenticated: () => true,
+      currentUser: { userName: 'Joe' }
+    };
+    let mockVoterService = {
+      userHasVoted: () => true
+    };
 
     TestBed.configureTestingModule({
       imports: [],
@@ -45,10 +50,16 @@ describe('SessionListComponent', () => {
   describe('initial display', () => {
     it('should have the correct session title', () => {
       component.sessions = [{
-        id: 3, name: 'Session 1', presenter: 'Joe',
-        duration: 1, level: 'beginner', abstract: 'abstract', voters: ['john', 'bob']
+        id: 3,
+        name: 'Session 1',
+        presenter: 'Joe',
+        duration: 1,
+        level: 'beginner',
+        abstract: 'abstract',
+        voters: ['john', 'bob']
       }];
       component.filterBy = 'all';
+      component.sortBy = 'name';
       component.eventId = 4;
 
       component.ngOnChanges();
