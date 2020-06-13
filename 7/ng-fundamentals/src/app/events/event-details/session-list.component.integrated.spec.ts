@@ -73,7 +73,5 @@ describe('SessionListComponent', () => {
 
       expect(debugEl.query(By.css('[well-title')).nativeElement.textContent).toContain('Session 1');
     })
-
-
   })
 })
