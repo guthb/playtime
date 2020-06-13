@@ -1,6 +1,8 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing'
 import { DebugElement, Component } from '@angular/core'
 import { By } from '@angular/platform-browser'
+import { UpvoteComponent } from './upvote.component'
+import { DurationPipe } from '../shared/duration.pipe'
 
 import { SessionListComponent } from './session-list.component'
 import { AuthService } from '../../user/auth.service'
@@ -20,7 +22,9 @@ describe('SessionListComponent', () => {
     TestBed.configureTestingModule({
       imports: [],
       declarations: [
-        SessionListComponent
+        SessionListComponent,
+        UpvoteComponent,
+        DurationPipe
       ],
       providers: [
         { provide: AuthService, useValue: mockAuthService },
