@@ -1,13 +1,14 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing'
 import { DebugElement, Component } from '@angular/core'
 import { By } from '@angular/platform-browser'
-import { UpvoteComponent } from './upvote.component'
-import { DurationPipe } from '../shared/duration.pipe'
 
 import { SessionListComponent } from './session-list.component'
 import { AuthService } from '../../user/auth.service'
 import { VoterService } from './voter.service'
 import { ISession } from '../shared/event.model'
+import { UpvoteComponent } from './upvote.component'
+import { DurationPipe } from '../shared/duration.pipe'
+import { CollapsbileWellComponent } from '../../common/collapsible-well.component'
 
 describe('SessionListComponent', () => {
   let fixture: ComponentFixture<SessionListComponent>,
@@ -24,7 +25,8 @@ describe('SessionListComponent', () => {
       declarations: [
         SessionListComponent,
         UpvoteComponent,
-        DurationPipe
+        DurationPipe,
+        CollapsbileWellComponent
       ],
       providers: [
         { provide: AuthService, useValue: mockAuthService },
