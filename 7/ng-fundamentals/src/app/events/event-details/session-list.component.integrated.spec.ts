@@ -31,16 +31,18 @@ describe('SessionListComponent', () => {
       imports: [],
       declarations: [
         SessionListComponent,
-        UpvoteComponent,
+        //UpvoteComponent,
         DurationPipe,
-        CollapsbileWellComponent
+        //CollapsbileWellComponent
       ],
       providers: [
         { provide: AuthService, useValue: mockAuthService },
         { provide: VoterService, useValue: mockVoterService }
       ],
-      schemas: []
-    })
+      schemas: [
+        NO_ERRORS_SCHEMA
+      ]
+    }).compileComponents();
   }))
   beforeEach(() => {
     fixture = TestBed.createComponent(SessionListComponent);
@@ -67,9 +69,9 @@ describe('SessionListComponent', () => {
       component.ngOnChanges();
       fixture.detectChanges();
 
-      //expect(element.querySelector('[well-title]').textContent).toContain('Session 1');
+      expect(element.querySelector('[well-title]').textContent).toContain('Session 1');
 
-      //expect(debugEl.query(By.css('[well-title')).nativeElement.textContent).toContain('Session 1');
+      expect(debugEl.query(By.css('[well-title')).nativeElement.textContent).toContain('Session 1');
     })
 
 
