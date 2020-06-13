@@ -1,5 +1,5 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing'
-import { DebugElement, Component } from '@angular/core'
+import { DebugElement, Component, NO_ERRORS_SCHEMA } from '@angular/core'
 import { By } from '@angular/platform-browser'
 
 import { SessionListComponent } from './session-list.component'
@@ -9,6 +9,8 @@ import { ISession } from '../shared/event.model'
 import { UpvoteComponent } from './upvote.component'
 import { DurationPipe } from '../shared/duration.pipe'
 import { CollapsbileWellComponent } from '../../common/collapsible-well.component'
+
+
 
 describe('SessionListComponent', () => {
   let fixture: ComponentFixture<SessionListComponent>,
@@ -69,5 +71,7 @@ describe('SessionListComponent', () => {
 
       //expect(debugEl.query(By.css('[well-title')).nativeElement.textContent).toContain('Session 1');
     })
+
+
   })
 })
