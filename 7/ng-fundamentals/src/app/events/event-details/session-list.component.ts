@@ -69,6 +69,6 @@ function sortByNameAsc(s1: ISession, s2: ISession) {
 
 function sortByVotesDsc(s1: ISession, s2: ISession) {
 
-  return s2.voters.length - s1.voters.length
+  return s2.voters.length - s1.voters.length;
 
 }
